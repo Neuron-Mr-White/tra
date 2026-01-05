@@ -1,7 +1,17 @@
 import Database from 'better-sqlite3';
 import { config } from './config.js';
 
-const db = new Database(config.DATABASE_URL);
+import fs from 'fs';
+import path from 'path';
+
+const dbPath = config.DATABASE_URL;
+const dbDir = path.dirname(dbPath);
+
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+}
+
+const db = new Database(dbPath);
 
 // Initialize tables
 db.exec(`

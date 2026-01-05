@@ -4,6 +4,6 @@ services:
     env_file:
       - .env
     volumes:
-      - ./tra.db:/app/tra.db
+      - ./data:/app/data
       - ./auth_info_baileys:/app/auth_info_baileys
     restart: unless-stopped
