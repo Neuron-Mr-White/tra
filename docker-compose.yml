@@ -1,0 +1,11 @@
+services:
+  tra-app:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./tra.db:/app/tra.db
+      - ./auth_info_baileys:/app/auth_info_baileys
+    restart: unless-stopped

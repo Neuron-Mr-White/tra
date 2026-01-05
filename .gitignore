@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+
+# Database
+tra.db
+tra.db-journal
+
+# WhatsApp Session Data (Critical to ignore)
+auth_info_baileys/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pino.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary test files
+cookies.txt
+
+# Editor directories
+.idea/
+.vscode/
